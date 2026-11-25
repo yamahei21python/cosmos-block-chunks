@@ -40,4 +40,4 @@ jobs:
               --notes "cosmos raw block data. JSON gz + manifest (first/last/block_count/tx_count/bytes/sha256). No private keys."
           python3 scripts/fetch_chunk.py --first "$f" --count "$c" --out "cosmos_${f}_${l}.json"
           gh release upload "$TAG" --repo "$GITHUB_REPOSITORY" --clobber \
-            "cosmos_${f}_${l}.json.gz" "cosmos_${f}_${l}.manifest.json"
+            "cosmos_${f}_${l}.json.gz" "cosmos_${f}_${l}.json.manifest.json"
